@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Forgot Password</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<style>
+    body{
+    font-family: 'Poppins', sans-serif;
+    overflow: hidden;
+    background-color: #091640;
+    }
+
+    .container{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+form{
+	width: 360px;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 20px;
+    position: relative;
+    top: 45%;
+    right: 50%;
+}
+</style>
+<body>
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+                <form id="forgot-password-form">
+                    <div class="mobile form-group">
+                        <label for="mobile-number">Mobile Number:</label>
+                        <input type="text" class="form-control" id="mobile-number" placeholder="Enter your mobile number">
+                    </div>
+                    <button type="button" class="btn btn-primary" id="send-otp-btn">Send OTP</button>
+                    <div id="otp-verification-section" style="display: none;">
+                        <div class="form-group">
+                            <label for="otp">OTP:</label>
+                            <input type="text" class="form-control" id="otp" placeholder="Enter OTP">
+                        </div>
+                        <button type="button" class="btn btn-primary" id="verify-otp-btn">Verify OTP</button>
+                    </div>
+                    <div id="change-password-section" style="display: none;">
+                        <div class="form-group">
+                            <label for="new-password">New Password:</label>
+                            <input type="password" class="form-control" id="new-password" placeholder="Enter new password">
+                        </div>
+                        <div class="form-group">
+                            <label for="confirm-password">Confirm Password:</label>
+                            <input type="password" class="form-control" id="confirm-password" placeholder="Confirm new password">
+                        </div>
+                        <button type="button" class="btn btn-primary" id="change-password-btn">Change Password</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+        $(document).ready(function() {
+    $('#send-otp-btn').click(function() {
+        const mobileNumber = $('#mobile-number').val();
+        alert('OTP sent to your mobile number: ' + mobileNumber);
+        $('.mobile').hide();
+        $('#send-otp-btn').hide();
+        $('#otp-verification-section').show();
+    });
+
+    $('#verify-otp-btn').click(function() {
+        alert('OTP verified successfully.');
+        $('.mobile').hide();
+        $('#otp-verification-section').hide();
+        $('#change-password-section').show();
+    });
+
+    $('#change-password-btn').click(function() {
+        alert('Password changed successfully. Redirecting to sign-in page...');
+        window.location.href = 'login.html'; 
+    });
+});
+    </script>
+</body>
+</html>

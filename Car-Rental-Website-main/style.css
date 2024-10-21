@@ -1,0 +1,71 @@
+html{
+    scroll-behavior: smooth;
+}
+
+.cbtn{
+    background-color: none !important;
+    opacity: 0;
+    border: none;
+    background-color: none;
+}
+.cbtn:hover{
+    opacity: 0;
+    border: none;
+    background-color: none;
+}
+
+.a{
+    position: relative;
+    top: 152px;
+    left: 156px;
+    z-index: 1;
+}
+
+.b{
+    position: relative;
+    top: 152px;
+    left: 156px;
+    z-index: 1;
+    font-size: larger;
+}
+
+.addremove{
+    position: relative;
+    left: 68%;
+    top: -70px;
+}
+
+.tag{
+    position: relative;
+    left: 18%;
+    top: -13px;
+    color: rgb(248, 126, 56);
+    font-weight: 500;
+}
+
+.carpic{
+    height: 145px;
+    position: absolute;
+    left: 49%;
+    top: 37px;
+}
+
+.footer{
+    background-color: rgb(156, 153, 151);
+    color: white;
+}
+
+.app-icons{
+    position: relative;
+    left: 13%;
+    display: flex;
+    gap: 20px;
+}
+
+
+
+.delete-checkbox{
+    position: relative;
+    left: 45%;
+    bottom: -12px;
+}
